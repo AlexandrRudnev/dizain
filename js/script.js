@@ -48,12 +48,13 @@ window.addEventListener('DOMContentLoaded', function () {
         fotoShou = document.querySelector('.shou'),
         fotoCloset = document.querySelector('.closet'),
         fotoCont = document.querySelectorAll('.container')[2],
-        fotoImg = document.querySelectorAll('.infoto'); 
-
+        fotoImg = document.querySelectorAll('.infoto'),
+        mai = document.querySelector('.main-block'); 
         tabs(tab, info, tabContent);
         tabs(tab1, info1, tabContent1);
         tabs(l, u, con);
-
+        mai.classList.add('active');
+        
         fotoCont.addEventListener('click', function (event) {
             let target = event.target;                               
                 for (let i = 0; i < fotoImg.length; i++) {                   
