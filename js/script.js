@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (z[b].classList.contains('hide')) {
                 z[b].classList.remove('hide');
                 z[b].classList.add('show');
+                // z[b].scrollTop = 100;
             }
         }
 
@@ -25,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 'info-header-tab1')|| target.classList.contains('li')) {
                  
                 for (let i = 0; i < x.length; i++) {
-                    if (target == x[i]) {
+                    if (target == x[i]) {                        
                         hideTabContent(0);
                         showTabContent(i);
                         break;
@@ -60,7 +61,8 @@ window.addEventListener('DOMContentLoaded', function () {
                         let ur = fotoImg[i].getAttribute("src");
                         fotoShou.style.background = 'url(' + ur + ')' + ' no-repeat';
                         fotoShou.style.backgroundSize = '100%' + '100%';
-                        fotoShou.style.display = 'block';                
+                        fotoShou.style.display = 'block';
+                                       
                     }
                     
                 }

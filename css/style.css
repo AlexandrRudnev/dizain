@@ -123,49 +123,62 @@ header ul li:hover::before {
   border: 3px solid #000f;
   font-size: 70px;
   padding-bottom: 40px;
+  cursor: pointer;
+}
+.closet p {
+  padding-left: 3px;
+  font-size: 89px;
+  margin-top: -27px;
 }
 
 .main {
-  height: 650px;
+  height: 450px;
   width: 100%;  
 }
 .main-block {
-  width: 1110px;
-  min-height: 300px;
+  width: 100%;
+  /* min-height: 300px; */
+  height: 440px;
   border: 6px solid #c78030;
-  background-color: rgba(240, 23, 95, 0.4);
+  background-color: #fff;
   margin: 0 auto;
-  padding: 40px;
-  margin-top: 180px;
-  text-align: center;
+  padding: 20px;
+  margin-top: 120px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+  /* text-align: center; */
 }
-.main-block-link {
-  color: #fff;
+.main-block-text {
+  color: #000;
   font-size: 22px;
   font-weight: bold;
+  float: left;
 }
-.main-block-link:after {
+.main-block-text:after {
   content: '';
   display: block;
-  width: 10%;
+  width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   margin: 0 auto;
   margin-top: 2px;
 }
-.main-block-title {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 52px;
-  margin-top: 35px;
+.main-block-img {
+  float: right;
+  border: #373737 solid 2px;
+  width: 50%;
+  height: 100%;
 }
-.main-block-descr {
+.main-block-img img {
+  width: 100%;
+  height: 100%;
+}
+/* .main-block-descr {
   color: #c78030;
   text-transform: uppercase;
   font-size: 22px;
   margin-top: 35px;
   font-weight: bold;
-}
+} */
 .content {
   width: 100%;
   background-position: 50% 30%;
@@ -175,7 +188,7 @@ header ul li:hover::before {
   min-height: 580px;
   background-color: #fff;
   padding: 50px;
-  margin: 20px;
+  margin-top: 20px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
 }
 #about img {
@@ -243,9 +256,16 @@ header ul li:hover::before {
 }
 .content .show, .content .info .show {
   /* display: -webkit-box; */
+  top: 100px;
   display: -ms-flexbox;
 }
-
+/* .content>div:not(.ul) {
+  display: none;
+ 
+} */
+/* .content>div:target {
+  display: block;
+} */
 .content .contact {
   width: 86%;
   height: 400px;
@@ -348,113 +368,4 @@ header ul li:hover::before {
   display: block;
   margin: 0 auto;
   margin-top: 17px;
-}
-.overlay {
-  position: fixed;
-  display: none;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
-}
-.overlay .popup {
-  position: fixed;
-  z-index: 4;
-  left: 50%;
-  top: 150px;
-  width: 752px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.overlay .popup-close {
-  position: absolute;
-  right: -20px;
-  top: -35px;
-  cursor: pointer;
-  font-size: 35px;
-  color: #fff;
-  font-weight: 300;
-}
-.overlay .popup-title {
-  display: block;
-  width: 100%;
-  height: 71px;
-  line-height: 71px;
-  margin: 0;
-  background-color: #c78030;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 21px;
-  font-weight: 500;
-  text-align: center;
-}
-.overlay .popup-form {
-  background: url(../img/modal.jpg) center no-repeat;
-  background-size: cover;
-  padding: 35px 88px 50px 88px;
-  color: #fff;
-}
-.overlay .popup-form-header {
-  padding: 0;
-  font-weight: 400;
-  line-height: 27px;
-  font-size: 30px;
-  text-align: center;
-}
-.overlay .popup-form__label {
-  display: block;
-  margin-top: 23px;
-  font-size: 20px;
-  font-weight: 300;
-  text-align: center;
-}
-.overlay .popup-form__input {
-  width: 365px;
-  height: 56px;
-  margin-top: 17px;
-  font-size: 18px;
-  background-color: #c78030;
-  border: none;
-  color: #fff;
-  text-align: center;
-}
-.overlay .popup-form__input::-webkit-input-placeholder {
-  color: #fff;
-}
-.overlay .popup-form__input::-moz-placeholder {
-  color: #fff;
-}
-.overlay .popup-form__input:-moz-placeholder {
-  color: #fff;
-}
-.overlay .popup-form__input:-ms-input-placeholder {
-  color: #fff;
-}
-.overlay .popup-form__input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-.overlay .popup-form__input:focus::-moz-placeholder {
-  color: transparent;
-}
-.overlay .popup-form__input:focus:-moz-placeholder {
-  color: transparent;
-}
-.overlay .popup-form__input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-.overlay .popup-form__btn {
-  width: 180px;
-  height: 56px;
-  font-size: 15px;
-  line-height: 22px;
-  margin-left: 16px;
-  background-color: transparent;
-  color: #c78030;
-  border: 1px solid #c78030;
-  cursor: pointer;
-}
-.overlay .popup-form__btn:hover {
-  box-shadow: 0 0 10px #c78030;
 }
