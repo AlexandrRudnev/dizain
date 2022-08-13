@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (z[b].classList.contains('hide')) {
                 z[b].classList.remove('hide');
                 z[b].classList.add('show');
-                // z[b].scrollTop = 100;
+                window.scrollTo(0,500);
             }
         }
 
