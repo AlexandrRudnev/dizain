@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
         con = document.querySelectorAll('.info'),
         fotoShou = document.querySelector('.shou'),
         fotoCloset = document.querySelector('.closet'),
-        fotoCont = document.querySelectorAll('.container')[2],
+        fotoCont = document.querySelectorAll('.container')[1],
         fotoImg = document.querySelectorAll('.infoto'),
         mai = document.querySelector('.main-block'); 
         tabs(tab, info, tabContent);
