@@ -49,10 +49,12 @@ window.addEventListener('DOMContentLoaded', function () {
         fotoCloset = document.querySelector('.closet'),
         fotoCont = document.querySelectorAll('.container')[1],
         fotoImg = document.querySelectorAll('.infoto'),
-        mai = document.querySelector('.main-block'); 
+        mai = document.querySelector('.main-block');
+         
         tabs(tab, info, tabContent);
         tabs(tab1, info1, tabContent1);
         tabs(l, u, con);
+
         mai.classList.add('active');
         
         fotoCont.addEventListener('click', function (event) {
