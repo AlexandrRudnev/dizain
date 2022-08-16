@@ -49,13 +49,19 @@ window.addEventListener('DOMContentLoaded', function () {
         fotoCloset = document.querySelector('.closet'),
         fotoCont = document.querySelectorAll('.container')[1],
         fotoImg = document.querySelectorAll('.infoto'),
-        mai = document.querySelector('.main-block');
+        mai = document.querySelector('.main-block'),
+        txt = document.querySelector('.main-block-text'),
+        im = document.querySelector('.main-block-img');
+
          
         tabs(tab, info, tabContent);
         tabs(tab1, info1, tabContent1);
         tabs(l, u, con);
-
-        mai.classList.add('active');
+       
+        mai.classList.add('active');      
+        
+            txt.classList.add('main-block-text-activ');
+            im.classList.add('main-block-img-activ');      
         
         fotoCont.addEventListener('click', function (event) {
             let target = event.target;                               
