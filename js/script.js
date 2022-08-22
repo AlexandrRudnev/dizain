@@ -63,18 +63,20 @@ window.addEventListener('DOMContentLoaded', function () {
     showSlides(slideIndex);
 
     function showSlides(n) {
-        if (n > im.length & n > im.length) {
+        if (n > im.length & n > txt.length) {
             slideIndex = 1;
         }
         if (n < 1) {
             slideIndex = im.length;
             slideIndex = txt.length;
         }
-        txt.forEach((item) => item.style.display = 'none');
-        txt.forEach((item) => item.classList.remove('main-block-text-activ'));
+        for (let i = 0; i < im.length & i < txt.length; ++i) {
+            txt[i].style.display = 'none';
+            txt[i].classList.remove('main-block-text-activ');
+            im[i].style.display = 'none';
+            im[i].classList.remove('main-block-img-activ');
+        }
         txt[slideIndex - 1].style.display = 'block';
-        im.forEach((item) => item.style.display = 'none');
-        im.forEach((item) => item.classList.remove('main-block-img-activ'));
         im[slideIndex - 1].style.display = 'block';
         setTimeout(function() {
             im[slideIndex - 1].classList.add('main-block-img-activ');
