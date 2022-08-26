@@ -63,17 +63,17 @@ window.addEventListener('DOMContentLoaded', function () {
     showSlides(slideIndex);
 
     function showSlides(n) {
-        if (n > im.length & n > txt.length) {
+        if (n > im.length) {
             slideIndex = 1;
         }
         if (n < 1) {
             slideIndex = im.length;
             slideIndex = txt.length;
         }
-        for (let i = 0; i < im.length & i < txt.length; ++i) {
-            txt[i].style.display = 'none';
+        for (let i = 0; i < im.length; ++i) {
+            txt[i].style.display = '';
             txt[i].classList.remove('main-block-text-activ');
-            im[i].style.display = 'none';
+            im[i].style.display = '';
             im[i].classList.remove('main-block-img-activ');
         }
         txt[slideIndex - 1].style.display = 'block';
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function () {
         setTimeout(function() {
             im[slideIndex - 1].classList.add('main-block-img-activ');
             txt[slideIndex - 1].classList.add('main-block-text-activ');
-          }, 800);
+          }, 400);
                
     }
 
