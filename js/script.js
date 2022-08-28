@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 fotoShou.style.background = 'url(' + ur + ')' + ' no-repeat';
                 fotoShou.style.backgroundSize = '100%' + '100%';
                 fotoShou.style.display = 'block';
-
+                document.body.style.overflow = 'hidden';
             }
 
         }
@@ -104,6 +104,7 @@ window.addEventListener('DOMContentLoaded', function () {
     fotoCloset.addEventListener('click', function () {
         fotoShou.style.display = '';
         fotoShou.style.background = '';
+        document.body.style.overflow = '';
     });
 
 });
