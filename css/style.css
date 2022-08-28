@@ -326,8 +326,14 @@ header ul li:hover::before {
       -ms-flex-align: center;
           align-items: center;
 }
-.content footer img {
-  width: 50px;
-  height: 50px;
+.content footer img.one {
+  width: 45px;
+  height: 45px;
+  margin-left: 30%;
+  margin-bottom: 5px;
+}
+.content footer img.too {
+  width: 60px;
+  height: 60px;
   margin-left: 30%;
 }
