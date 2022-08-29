@@ -1,5 +1,15 @@
 window.addEventListener('DOMContentLoaded', function () {
     'use strict';
+    // табы
+    let tab = document.querySelectorAll('.info-header-tab'),
+        info = document.querySelector('.info-header'),
+        tabContent = document.querySelectorAll('.info-tabcontent'),
+        tab1 = document.querySelectorAll('.info-header-tab1'),
+        info1 = document.querySelector('.info-header1'),
+        tabContent1 = document.querySelectorAll('.info-tabcontent1'),
+        l = document.querySelectorAll('.li'),
+        u = document.querySelector('.ul'),
+        con = document.querySelectorAll('.info');
 
     function tabs(x, y, z) {
         function hideTabContent(a) {
@@ -35,31 +45,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
     }
-    let tab = document.querySelectorAll('.info-header-tab'),
-        info = document.querySelector('.info-header'),
-        tabContent = document.querySelectorAll('.info-tabcontent'),
-        tab1 = document.querySelectorAll('.info-header-tab1'),
-        info1 = document.querySelector('.info-header1'),
-        tabContent1 = document.querySelectorAll('.info-tabcontent1'),
-        l = document.querySelectorAll('.li'),
-        u = document.querySelector('.ul'),
-        con = document.querySelectorAll('.info'),
-        fotoShou = document.querySelector('.shou'),
-        fotoCloset = document.querySelector('.closet'),
-        fotoCont = document.querySelectorAll('.container')[1],
-        fotoImg = document.querySelectorAll('.infoto'),
-        mai = document.querySelector('.main-block'),
-        txt = document.querySelectorAll('.main-block-text'),
-        im = document.querySelectorAll('.main-block-img');
-
     tabs(tab, info, tabContent);
     tabs(tab1, info1, tabContent1);
     tabs(l, u, con);
 
+    // слайт баннеры
+    let mai = document.querySelector('.main-block'),
+        txt = document.querySelectorAll('.main-block-text'),
+        im = document.querySelectorAll('.main-block-img');
+
     mai.classList.add('active');
 
     let slideIndex = 1;
-    
+
     showSlides(slideIndex);
 
     function showSlides(n) {
@@ -78,23 +76,26 @@ window.addEventListener('DOMContentLoaded', function () {
         }
         txt[slideIndex - 1].style.display = 'block';
         im[slideIndex - 1].style.display = 'block';
-        setTimeout(function() {
+        setTimeout(function () {
             im[slideIndex - 1].classList.add('main-block-img-activ');
             txt[slideIndex - 1].classList.add('main-block-text-activ');
-          }, 400);
-               
-    }
+        }, 400);
 
-            setInterval(() =>showSlides(++slideIndex), 5000);
-   
+    }
+    setInterval(() => showSlides(++slideIndex), 5000); 
+
+    // вывод на окно просмотра
+    let fotoShou = document.querySelector('.shou'),
+        fotoCloset = document.querySelector('.closet'),
+        fotoCont = document.querySelectorAll('.container')[1],
+        fotoImg = document.querySelectorAll('.infoto');
     fotoCont.addEventListener('click', function (event) {
         let target = event.target;
         for (let i = 0; i < fotoImg.length; i++) {
             if (target == fotoImg[i]) {
                 let ur = fotoImg[i].getAttribute("src");
-                fotoShou.style.background = 'url(' + ur + ')' + ' no-repeat';
-                fotoShou.style.backgroundSize = '100%' + '100%';
-                fotoShou.style.display = 'block';
+                fotoShou.style.cssText = `background: url(${ur}); background-size: 100% 100%; 
+                display: block;`;
                 document.body.style.overflow = 'hidden';
             }
 
