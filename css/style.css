@@ -99,34 +99,97 @@ header ul li:before {
 header ul li:hover::before {
   width: 0%;
 }
-
 .shou {
   height: 650px;
   width: 1137px;
   position: fixed;
-  background-color: rgba(10, 20, 155, 0.7);
   margin-left: 4%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
-  z-index: 7;
   display: none;
+}
+.shou .prew {
+  height: 100%;
+  width: 100px;
+  background-color: #fff;
+  float: left;
+  opacity: 0;
+}
+.shou .prew:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: rgba(10, 20, 155);
+  margin-top: -4px;
+  margin-left: 6px;
+  transform-origin: 0 100%;
+  transform: rotate(40deg);
+}
+.shou .prew:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px; 
+  margin-top: 326px;
+  margin-left: 7px;
+  border-radius: 3px 0 0 0;
+  transform-origin: 0 100%;
+  transform: rotate(-40deg);
+  background-color: rgba(10, 20, 155);
+}
+.shou .prew:hover {
+  opacity: 0.5;
+}
+.shou .go {
+  height: 100%;
+  width: 100px;
+  background-color: #fff;
+  float: right;
+  opacity: 0;
+}
+.shou .go:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: rgba(10, 20, 155);
+  margin-top: -3px;
+  margin-left: 75px;
+  transform-origin: 100% 0;
+  transform: rotate(40deg);
+}
+.shou .go::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: rgba(10, 20, 155);
+  margin-top: 325px;
+  margin-left: 75px;
+  border-radius: 0 0 3px 0 ;
+  transform-origin: 100% 0;
+  transform: rotate(-40deg);
+} 
+.shou .go:hover {
+  opacity: 0.5;
 }
 .shou .closet {
   height: 40px;
   width: 40px;
-  /* position: fixed; */
   background-color: #fff;
   margin-left: 1104px;
   margin-top: -5px;
   border: 1px solid #000f;
-  /* font-size: 70px; */
   border-radius: 100%;
-  /* padding-bottom: 40px; */
   cursor: pointer;
+  position: absolute;
+  z-index:10;
 }
 .closet p {
   padding-left: 10px;
   font-size: 40px;
   margin-top: -9px;
+  z-index: 7;
 }
 
 .main-block {
