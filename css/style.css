@@ -109,8 +109,8 @@ header ul li:hover::before {
 }
 .shou .prew {
   height: 100%;
-  width: 100px;
-  background-color: #fff;
+  width: 60px;
+  background-color: rgba(10, 20, 155);
   float: left;
   opacity: 0;
 }
@@ -119,7 +119,7 @@ header ul li:hover::before {
   display: block;
   width: 20px;
   height: 3px;
-  background-color: rgba(10, 20, 155);
+  background-color: #fff;
   margin-top: -4px;
   margin-left: 6px;
   transform-origin: 0 100%;
@@ -135,15 +135,15 @@ header ul li:hover::before {
   border-radius: 3px 0 0 0;
   transform-origin: 0 100%;
   transform: rotate(-40deg);
-  background-color: rgba(10, 20, 155);
+  background-color: #fff;
 }
 .shou .prew:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .shou .go {
   height: 100%;
-  width: 100px;
-  background-color: #fff;
+  width: 60px;
+  background-color: rgba(10, 20, 155);
   float: right;
   opacity: 0;
 }
@@ -152,26 +152,26 @@ header ul li:hover::before {
   display: block;
   width: 20px;
   height: 3px;
-  background-color: rgba(10, 20, 155);
+  background-color: #fff;
   margin-top: -3px;
-  margin-left: 75px;
+  margin-left: 33px;
   transform-origin: 100% 0;
   transform: rotate(40deg);
 }
-.shou .go::before {
+.shou .go:before {
   content: '';
   display: block;
   width: 20px;
   height: 3px;
-  background-color: rgba(10, 20, 155);
+  background-color: #fff;
   margin-top: 325px;
-  margin-left: 75px;
+  margin-left: 33px;
   border-radius: 0 0 3px 0 ;
   transform-origin: 100% 0;
   transform: rotate(-40deg);
 } 
 .shou .go:hover {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .shou .closet {
   height: 40px;

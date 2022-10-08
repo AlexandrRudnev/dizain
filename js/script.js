@@ -31,9 +31,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
         y.addEventListener('click', function (event) {
             let target = event.target;
-            if (target && target.classList.contains('info-header-tab') || target.classList.contains(
-                    'info-header-tab1') || target.classList.contains('li')) {
-
+            if (target && target.classList.contains('info-header-tab') ||
+                target.classList.contains('info-header-tab1') || target.classList.contains('li')) {
                 for (let i = 0; i < x.length; i++) {
                     if (target == x[i]) {
                         hideTabContent(0);
@@ -82,30 +81,58 @@ window.addEventListener('DOMContentLoaded', function () {
         }, 400);
 
     }
-    setInterval(() => showSlides(++slideIndex), 5000); 
+    setInterval(() => showSlides(++slideIndex), 4000);
 
     // вывод на окно просмотра
     let fotoShou = document.querySelector('.shou'),
         fotoCloset = document.querySelector('.closet'),
-        fotoCont = document.querySelectorAll('.container')[1],
+        prew = document.querySelector('.prew'),
+        go =document.querySelector('.go'),
+        contFotAll = document.querySelectorAll('.container')[1],
+        fotoCont = document.querySelectorAll('.tabcontent'),
         fotoImg = document.querySelectorAll('.infoto');
-    fotoCont.addEventListener('click', function (event) {
-        let target = event.target;
-        for (let i = 0; i < fotoImg.length; i++) {
-            if (target == fotoImg[i]) {
-                let ur = fotoImg[i].getAttribute("src");
-                fotoShou.style.cssText = `background: url(${ur}); background-size: 100% 100%; 
-                display: block;`;
-                document.body.style.overflow = 'hidden';
+        let ur;
+        contFotAll.addEventListener('click', function (event) {
+            let target = event.target;
+            for (let i = 0; i < fotoImg.length; i++) {
+                if (target == fotoImg[i]) {
+                    ur = fotoImg[i].getAttribute("src");
+                    fotoShou.style.cssText = `background: url(${ur}); 
+                                    background-size: 100% 100%; 
+                                    display: block;`;
+                    document.body.style.overflow = 'hidden';
+                }
             }
 
+        });
+        fotoCloset.addEventListener('click', function () {
+            fotoShou.style.display = '';
+            fotoShou.style.background = '';
+            document.body.style.overflow = '';
+        });
+        function goPr(q) {
+            for (let i = 0; i < q.length; i++) {
+                if (q[i].getAttribute("src") == ur) {
+                    ur = q[--i].getAttribute("src");
+                    fotoShou.style.cssText = `background: url(${ur}); 
+                                        background-size: 100% 100%; 
+                                        display: block;`;
+                    document.body.style.overflow = 'hidden';
+                }
+            }
         }
-    });
-
-    fotoCloset.addEventListener('click', function () {
-        fotoShou.style.display = '';
-        fotoShou.style.background = '';
-        document.body.style.overflow = '';
-    });
-
+        prew.addEventListener('click', function () {
+            goPr(fotoImg);
+        });
+        go.addEventListener('click', function () {
+            for (let i = 0; i < fotoImg.length; i++) {
+                if (fotoImg[i].getAttribute("src") == ur) {
+                    ur = fotoImg[++i].getAttribute("src");
+                    fotoShou.style.cssText = `background: url(${ur}); 
+                                        background-size: 100% 100%; 
+                                        display: block;`;
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        });
 });
