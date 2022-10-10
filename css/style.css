@@ -356,10 +356,23 @@ header ul li:hover::before {
   border-bottom: 1px solid #fff;
   color: #000;
 }
-.content .contact-form form textarea {
+/* .content .contact-form form textarea {
   margin-top: 30px;
+} */
+.vremenno {
+  margin-top: 30px;
+  width: 420px;
+  height: 200px;
+  background-color: #fff;
+  color: #c78030;
+  font-weight: bold;
+  padding-top: 50px;
+  font-size: 18px;
 }
-.content .contact-form form button {
+.pochta {
+  color: red;
+}
+/* .content .contact-form form button {
   margin-top: 60px;
   width: 150px;
   height: 40px;
@@ -370,7 +383,8 @@ header ul li:hover::before {
 }
 .content .contact-form form button:hover {
   box-shadow: 0 0 10px #c78030;
-}
+  display: none;
+} */
 .content footer {
   width: 100%;
   height: 60px;
