@@ -370,7 +370,7 @@ header ul li:hover::before {
   font-size: 18px;
 }
 .pochta {
-  color: red;
+  color: rgba(10, 20, 155);
 }
 /* .content .contact-form form button {
   margin-top: 60px;
