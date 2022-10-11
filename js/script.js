@@ -89,8 +89,15 @@ window.addEventListener('DOMContentLoaded', function () {
         prew = document.querySelector('.prew'),
         go =document.querySelector('.go'),
         contFotAll = document.querySelectorAll('.container')[1],
-        fotoCont = document.querySelectorAll('.tabcontent'),
-        fotoImg = document.querySelectorAll('.infoto');
+        fotoImg = document.querySelectorAll('.infoto'),
+        fotoImg1 = document.querySelectorAll('.infoto1'),
+        fotoImg2 = document.querySelectorAll('.infoto2'),
+        fotoImg3 = document.querySelectorAll('.infoto3'),
+        fotoImg4 = document.querySelectorAll('.infoto4'),
+        fotoImg5 = document.querySelectorAll('.infoto5'),
+        fotoImg6 = document.querySelectorAll('.infoto6'),
+        fotoImg7 = document.querySelectorAll('.infoto7'),
+        fotoImg8 = document.querySelectorAll('.infoto8');
         let ur;
         contFotAll.addEventListener('click', function (event) {
             let target = event.target;
@@ -110,7 +117,7 @@ window.addEventListener('DOMContentLoaded', function () {
             fotoShou.style.background = '';
             document.body.style.overflow = '';
         });
-        function goPr(q) {
+        function Pr(q) {
             for (let i = 0; i < q.length; i++) {
                 if (q[i].getAttribute("src") == ur) {
                     ur = q[--i].getAttribute("src");
@@ -122,17 +129,35 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
         prew.addEventListener('click', function () {
-            goPr(fotoImg);
+            Pr(fotoImg1);
+            Pr(fotoImg2);
+            Pr(fotoImg3);
+            Pr(fotoImg4);
+            Pr(fotoImg5);
+            Pr(fotoImg6);
+            Pr(fotoImg7);
+            Pr(fotoImg8);
         });
-        go.addEventListener('click', function () {
-            for (let i = 0; i < fotoImg.length; i++) {
-                if (fotoImg[i].getAttribute("src") == ur) {
-                    ur = fotoImg[++i].getAttribute("src");
+        
+        function gow(w) {
+            for (let i = 0; i < w.length; i++) {
+                if (w[i].getAttribute("src") == ur) {
+                    ur = w[++i].getAttribute("src");
                     fotoShou.style.cssText = `background: url(${ur}); 
                                         background-size: 100% 100%; 
                                         display: block;`;
                     document.body.style.overflow = 'hidden';
                 }
             }
+        }
+        go.addEventListener('click', function () {
+            gow(fotoImg1);
+            gow(fotoImg2);
+            gow(fotoImg3);
+            gow(fotoImg4);
+            gow(fotoImg5);
+            gow(fotoImg6);
+            gow(fotoImg7);
+            gow(fotoImg8);
         });
 });
