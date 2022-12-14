@@ -7,6 +7,9 @@ window.addEventListener('DOMContentLoaded', function () {
         tab1 = document.querySelectorAll('.info-header-tab1'),
         info1 = document.querySelector('.info-header1'),
         tabContent1 = document.querySelectorAll('.info-tabcontent1'),
+        tab3 = document.querySelectorAll('.info-header-tab3'),
+        info3 = document.querySelector('.info-header3'),
+        tabContent3 = document.querySelectorAll('.info-tabcontent3'),
         l = document.querySelectorAll('.li'),
         u = document.querySelector('.ul'),
         con = document.querySelectorAll('.info');
@@ -46,6 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     tabs(tab, info, tabContent);
     tabs(tab1, info1, tabContent1);
+    tabs(tab3, info3, tabContent3);
     tabs(l, u, con);
 
     // слайт баннеры
@@ -97,7 +101,8 @@ window.addEventListener('DOMContentLoaded', function () {
         fotoImg5 = document.querySelectorAll('.infoto5'),
         fotoImg6 = document.querySelectorAll('.infoto6'),
         fotoImg7 = document.querySelectorAll('.infoto7'),
-        fotoImg8 = document.querySelectorAll('.infoto8');
+        fotoImg8 = document.querySelectorAll('.infoto8'),
+        fotoImg9 = document.querySelectorAll('.infoto9');
         let ur;
         contFotAll.addEventListener('click', function (event) {
             let target = event.target;
@@ -112,6 +117,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
 
         });
+    // перемещение по окну просмотра
         fotoCloset.addEventListener('click', function () {
             fotoShou.style.display = '';
             fotoShou.style.background = '';
@@ -137,6 +143,7 @@ window.addEventListener('DOMContentLoaded', function () {
             Pr(fotoImg6);
             Pr(fotoImg7);
             Pr(fotoImg8);
+            Pr(fotoImg9);
         });
         
         function gow(w) {
@@ -159,5 +166,6 @@ window.addEventListener('DOMContentLoaded', function () {
             gow(fotoImg6);
             gow(fotoImg7);
             gow(fotoImg8);
+            gow(fotoImg9);
         });
 });
