@@ -35,7 +35,9 @@ window.addEventListener('DOMContentLoaded', function () {
         y.addEventListener('click', function (event) {
             let target = event.target;
             if (target && target.classList.contains('info-header-tab') ||
-                target.classList.contains('info-header-tab1') || target.classList.contains('li')) {
+                target.classList.contains('info-header-tab1') ||
+                 target.classList.contains('info-header-tab3') || target.classList.contains('li'))
+                 {
                 for (let i = 0; i < x.length; i++) {
                     if (target == x[i]) {
                         hideTabContent(0);
